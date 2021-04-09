@@ -86,6 +86,37 @@ sudo tar xf /tmp/pycharm-professional-*.tar.gz -C /opt/
 # to run pycharm execute in terminal`. /opt/pycharm-2020.3.5/bin/pycharm.sh`
 # or add this line in your .zshrc or .bashrc file and run with `charm <project_path>` command
 # function charm { . /opt/pycharm-2020.3.5/bin/pycharm.sh "$1"; }
+# to run using terminal run `charm <dir_name | file_name>`
+
+# ----- intellif idea -----
+wget -P /tmp/ https://download.jetbrains.com/idea/ideaIU-2021.1.tar.gz
+sudo tar -xzf /tmp/ideaIU-*.tar.gz -C /opt/
+sudo ln -s /opt/idea-IU*/bin/idea.sh /usr/bin/idea
+
+# create desktop entry, please set Icon referring to your idea version
+cat > ~/.local/share/applications/idea.desktop <<EOL
+[Desktop Entry]
+Encoding=UTF-8
+Name=IntelliJ IDEA
+Exec=idea
+#Icon=/opt/idea-IU*/bin/idea.png
+Terminal=false
+Type=Application
+Categories=Development;
+EOL
+# to run using terminal run `idea <dir_name | file_name>`
+
+
+# ----- vs code -----
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+
+sudo apt install apt-transport-https -y
+sudo apt update
+sudo apt install code -y
+# to run using terminal run `code <dir_name | file_name>`
 
 
 ######################
@@ -125,3 +156,24 @@ sudo apt-get install apt-transport-https ca-certificates gnupg -y
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update && sudo apt-get install google-cloud-sdk -y
 # gcloud init
+
+
+#######################
+##### OTHER STUFF #####
+#######################
+# ----- Postman -----
+curl https://dl.pstmn.io/download/latest/linux64 --output /tmp/Postman.tar.gz
+sudo tar -xzf /tmp/Postman.tar.gz -C /opt/
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+# create desktop entry
+cat > ~/.local/share/applications/postman.desktop <<EOL
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+EOL
