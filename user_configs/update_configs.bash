@@ -1,7 +1,7 @@
 # disable ubuntu dock (it's up to u, I really don't like it) if INSTALL_OPTIONAL var is set
-if [ ! -v $INSTALL_OPTIONAL ]; then
-  gnome-extensions disable ubuntu-dock@ubuntu.com
-fi
+#if [ ! -v $INSTALL_OPTIONAL ]; then
+#  gnome-extensions disable ubuntu-dock@ubuntu.com
+#fi
 # to enable dock run `gnome-extensions enable ubuntu-dock@ubuntu.com`
 
 update_config () {
@@ -39,4 +39,6 @@ if [ ! -v $GIT_CONFIG_REPO ]; then
 
   echo "update user-dirs.dirs"
   update_config $CONFIGS_DIR/user-dirs.dirs $BACKUP_DIR/user-dirs.dirs ~/.config/user-dirs.dirs
+
+  # add your custom configs here
 fi
