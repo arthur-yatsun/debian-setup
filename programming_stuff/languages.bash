@@ -62,6 +62,6 @@ check java || \
 check mvn || \
 (
   echo -e "\ninstall mvn" && \
-  sudo apt install maven && \
+  sudo apt install maven -y && \
   echo "maven was installed. maven version - `mvn --version`"
 )
