@@ -21,9 +21,9 @@ sudo apt install curl wget git vim xclip htop tmux zsh software-properties-commo
 
 
 # install oh-my-zsh
-[ -d "$HOME/.oh-my-zdsh/" ] && echo -e "\nohmyzsh is already installed" || \
+[ -d "$HOME/.oh-my-zsh/" ] && echo -e "\nohmyzsh is already installed" || \
 (
-  echo -e "\ninstall ohmyzsh" && /
+  echo -e "\ninstall ohmyzsh" && \
   echo "y" | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
   echo "ohmyzsh was installed"
 )

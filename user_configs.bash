@@ -3,5 +3,3 @@ if [ ! -v $INSTALL_OPTIONAL ]; then
   gnome-extensions disable ubuntu-dock@ubuntu.com
 fi
 # to enable dock run `gnome-extensions enable ubuntu-dock@ubuntu.com`
-
-
