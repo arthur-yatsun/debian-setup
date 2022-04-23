@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-source ./utils.bash
+source ../utils.bash
 echo -e "\ninstall IDE's and programming other programming software"
 
 : '
