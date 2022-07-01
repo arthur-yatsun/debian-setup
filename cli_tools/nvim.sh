@@ -10,5 +10,8 @@ check nvim ||
 (
   add-apt-repository ppa:neovim-ppa/stable -y && \
   apt-get update && \
-  apt-get install neovim -y
+  apt-get install neovim -y && \
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 )
+
