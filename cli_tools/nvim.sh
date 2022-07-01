@@ -8,9 +8,8 @@ echo -e "\ninstall neovim"
 
 check nvim ||
 (
-  add-apt-repository ppa:neovim-ppa/stable -y && \
-  apt-get update && \
-  apt-get install neovim -y && \
+  wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb -P /tmp && /
+  apt install ./nvim-linux64.deb
   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 )
