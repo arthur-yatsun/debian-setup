@@ -73,5 +73,6 @@ check lua || \
   echo -e "\ninstall lua" && \
   wget -P /tmp/ http://www.lua.org/ftp/lua-5.3.5.tar.gz && \
   tar xvfz /tmp/lua-5.3.5.tar.gz -C /tmp/ && \
-  cd /tmp/lua-5.3.5 && make linux install INSTALL_TOP=/usr/local/lua/5_3_5 MYLIBS="-lncurses"
+  cd /tmp/lua-5.3.5 && make linux install INSTALL_TOP=/usr/local/lua/5_3_5 MYLIBS="-lncurses" && \
+  ln -s /usr/local/lua/5_3_5/bin/lua /usr/local/bin/
 )
