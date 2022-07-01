@@ -42,30 +42,30 @@ check virtualenv || \
 
 
 # install node
-check node || \
-(
-  echo -e "\ninstall node" && \
-  curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
-  apt-get install -y nodejs && \
-  echo "node was installed. node version - `node -v`"
-)
-
-
-# install java
-check java || \
-(
-  echo -e "\ninstall java" && \
-  apt-get install default-jre default-jdk -y && \
-  echo "java was installed. " && \
-  echo "java version - `java -version`. javac version - `javac -version`"
-)
-
-check mvn || \
-(
-  echo -e "\ninstall mvn" && \
-  apt-get install maven -y && \
-  echo "maven was installed. maven version - `mvn --version`"
-)
+# check node || \
+# (
+#   echo -e "\ninstall node" && \
+#   curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
+#   apt-get install -y nodejs && \
+#   echo "node was installed. node version - `node -v`"
+# )
+#
+#
+# # install java
+# check java || \
+# (
+#   echo -e "\ninstall java" && \
+#   apt-get install default-jre default-jdk -y && \
+#   echo "java was installed. " && \
+#   echo "java version - `java -version`. javac version - `javac -version`"
+# )
+#
+# check mvn || \
+# (
+#   echo -e "\ninstall mvn" && \
+#   apt-get install maven -y && \
+#   echo "maven was installed. maven version - `mvn --version`"
+# )
 
 # install lua
 check lua || \
