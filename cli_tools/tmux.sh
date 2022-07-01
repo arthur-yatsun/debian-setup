@@ -10,7 +10,7 @@ echo -e "\ninstall tmux"
 - tmux tpm
 '
 
-apt-get install tmux
+apt-get install tmux -y
 
 [ -d "$HOME/.tmux/plugins/tpm/" ] && echo -e "\ntpm has been already installed" || \
 (
