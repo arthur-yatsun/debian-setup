@@ -15,6 +15,6 @@ apt-get install curl wget git xclip htop tmux zsh software-properties-common sto
 [ -d "$HOME/.tmux/plugins/tpm/" ] && echo -e "\ntpm has been already installed" || \
 (
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && \
-  echo "\ntpm installation was completed"
+  echo -e "\ntpm installation was completed"
 )
 
