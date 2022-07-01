@@ -6,7 +6,8 @@ echo -e "\nstart the installation"
 apt-get update && apt-get upgrade -y
 
 cd cli_tools/ && \
-    bash utilities.sh
+    bash common.sh
+    bash zsh.sh
 # bash ./programming_stuff/cli_tools_n_packages.bash && \
 # bash ./programming_stuff/languages.bash && \
 # bash ./programming_stuff/apps.bash && \
