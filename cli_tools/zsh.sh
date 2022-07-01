@@ -35,17 +35,17 @@ if [ -d "$HOME/.oh-my-zsh/" ] && [ ! -v $INSTALL_OPTIONAL ]; then
   '
   echo -e "\ninstall zsh plugins"
 
-  [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ] && echo "zsh-autosuggestions is already installed" || \
-  git clone "https://github.com/zsh-users/zsh-autosuggestions" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  [ -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && echo "zsh-autosuggestions is already installed" || \
+  git clone "https://github.com/zsh-users/zsh-autosuggestions" ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-  [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ] && echo "zsh-syntax-highlighting is already installed" || \
-  git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  [ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] && echo "zsh-syntax-highlighting is already installed" || \
+  git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
   # virtualenv required
-  [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ] && echo "autoswitch_virtualenv is already installed" || \
-  git clone "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoswitch_virtualenv
+  [ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && echo "autoswitch_virtualenv is already installed" || \
+  git clone "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git" ~/.oh-my-zsh/custom/plugins/autoswitch_virtualenv
 
-  [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoswitch_virtualenv ] && echo "powerlevel10k theme is already installed" || \
-  git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git" ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+  [ -d ~/.oh-my-zsh/custom/plugins/autoswitch_virtualenv ] && echo "powerlevel10k theme is already installed" || \
+  git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git" ~/.oh-my-zsh/custom/themes/powerlevel10k
 fi
 
