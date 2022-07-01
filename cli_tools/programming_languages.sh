@@ -36,7 +36,7 @@ check pip3 || \
 check virtualenv || \
 (
   echo -e "\ninstall virtualenv" && \
-  apt-get install virtualenv && \
+  apt-get -y install virtualenv && \
   echo "virtualenv was installed"
 )
 
