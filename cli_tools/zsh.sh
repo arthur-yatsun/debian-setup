@@ -42,10 +42,10 @@ if [ -d "$HOME/.oh-my-zsh/" ]; then
   git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
   # virtualenv required
-  [ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && echo "autoswitch_virtualenv is already installed" || \
+  [ -d ~/.oh-my-zsh/custom/plugins/autoswitch_virtualenv ] && echo "autoswitch_virtualenv theme is already installed" || \
   git clone "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git" ~/.oh-my-zsh/custom/plugins/autoswitch_virtualenv
 
-  [ -d ~/.oh-my-zsh/custom/plugins/autoswitch_virtualenv ] && echo "powerlevel10k theme is already installed" || \
+  [ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && echo "powerlevel10k is already installed" || \
   git clone --depth=1 "https://github.com/romkatv/powerlevel10k.git" ~/.oh-my-zsh/custom/themes/powerlevel10k
 fi
 
