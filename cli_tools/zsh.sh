@@ -26,7 +26,7 @@ echo -e "\ninstall cli tools and packages"
 
 # install zsh plugins if INSTALL_OPTIONAL var is set
 # make sure that you define your plugins variable before you initialize zsh. https://stackoverflow.com/a/35929813
-if [ -d "$HOME/.oh-my-zsh/" ] && [ ! -v $INSTALL_OPTIONAL ]; then
+if [ -d "$HOME/.oh-my-zsh/" ]; then
   : '
   - zsh-autosuggestions          https://github.com/zsh-users/zsh-autosuggestions
   - zsh-syntax-highlighting      https://github.com/zsh-users/zsh-syntax-highlighting
