@@ -14,31 +14,31 @@ echo -e "\ninstall programming languages"
 
 # install python
 check python3 || \
-  (
-    echo -e "\ninstall python3" && \
-    add-apt-repository ppa:deadsnakes/ppa -y && \
-    apt-get update && \
-    apt-get install python3.8 && \
-    echo "python3.8 was installed";
+(
+  echo -e "\ninstall python3" && \
+  add-apt-repository ppa:deadsnakes/ppa -y && \
+  apt-get update && \
+  apt-get install python3.8 && \
+  echo "python3.8 was installed";
 
-    # install python stuff
-    apt-get install python3-distutils -y && \
-    echo "python stuff were installed"
-  )
+  # install python stuff
+  apt-get install python3-distutils -y && \
+  echo "python stuff were installed"
+)
 
 check pip3 || \
- (
-    echo -e "\ninstall pip3" && \
-    apt-get install python3-pip -y && \
-    echo "pip3 was installed"
- )
+(
+  echo -e "\ninstall pip3" && \
+  apt-get install python3-pip -y && \
+  echo "pip3 was installed"
+)
 
 check virtualenv || \
- (
-    echo -e "\ninstall virtualenv" && \
-    apt-get install virtualenv && \
-    echo "virtualenv was installed"
- )
+(
+  echo -e "\ninstall virtualenv" && \
+  apt-get install virtualenv && \
+  echo "virtualenv was installed"
+)
 
 
 # install node
@@ -65,4 +65,13 @@ check mvn || \
   echo -e "\ninstall mvn" && \
   apt-get install maven -y && \
   echo "maven was installed. maven version - `mvn --version`"
+)
+
+# install lua
+check lua || \
+(
+  echo -e "\ninstall lua" && \
+  wget -P /tmp/ http://www.lua.org/ftp/lua-5.3.5.tar.gz && \
+  tar xvfz /tmp/lua-5.3.5.tar.gz -C /tmp/ && \
+  cd /tmp/lua-5.3.5 && make linux install INSTALL_TOP=/usr/local/lua/5_3_5 MYLIBS="-lncurses"
 )
