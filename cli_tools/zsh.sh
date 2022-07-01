@@ -3,7 +3,7 @@
 set -e
 
 source ../utils.sh
-echo -e "\ninstall cli tools and packages"
+echo -e "\ninstall zsh and plugins"
 
 : '
 - zsh oh-my-zsh 
