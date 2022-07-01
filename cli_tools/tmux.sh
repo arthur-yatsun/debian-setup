@@ -19,4 +19,4 @@ apt-get install tmux -y
 )
 
 # install tmux-plugins
-~/.tmux/plugins/tpm/scripts/install_plugins.sh
+# ~/.tmux/plugins/tpm/scripts/install_plugins.sh
