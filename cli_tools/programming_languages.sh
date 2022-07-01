@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-source ../utils.bash
+source ../utils.sh
 echo -e "\ninstall programming languages"
 
 : '

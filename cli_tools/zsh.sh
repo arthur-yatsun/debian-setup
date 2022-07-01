@@ -2,7 +2,7 @@
 
 set -e
 
-source ../utils.bash
+source ../utils.sh
 echo -e "\ninstall cli tools and packages"
 
 : '
