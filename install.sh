@@ -10,8 +10,8 @@ cd cli_tools/
 bash common.sh bash && \
 bash zsh.sh && \
 bash nvim.sh && \
-# bash tmux.sh  && \
+bash tmux.sh  && \
 bash programming_languages.sh
-# bash databases.sh && \
-# bash cloud_sdk.sh
+bash databases.sh && \
+bash cloud_sdk.sh
 
