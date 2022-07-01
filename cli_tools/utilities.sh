@@ -5,19 +5,16 @@ source ../utils.bash
 echo -e "\ninstall cli tools and packages"
 
 : '
-- curl
-- wget
-- git
-- vim
-- xclip
-- htop
+- curl wget git xclip htop software-properties-common
 - tmux
-- zsh
-- software-properties-common
-- oh-my-zsh
+- zsh oh-my-zsh 
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    zsh-autoswitch-virtualenv 
+    powerlevel10k theme
 '
 
-sudo apt install curl wget git vim xclip htop tmux zsh software-properties-common -y
+sudo apt install curl wget git xclip htop tmux zsh software-properties-common -y
 
 
 # install oh-my-zsh
