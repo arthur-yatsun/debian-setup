@@ -3,7 +3,7 @@ set -e
 
 echo -e "\nstart the installation"
 
-# apt-get update && apt-get upgrade -y
+apt-get update && apt-get upgrade -y
 
 cd cli_tools/ && \
     bash utilities.sh
