@@ -14,7 +14,7 @@ echo -e "\ninstall databases"
 check mysql || \
 (
   echo -e "\ninstall mysql" && \
-  apt install mysql-server -y && \
+  apt-get install mysql-server -y && \
   echo "mysql was installed"
 )
 # to check mysql server status run - `systemctl status mysql.service`

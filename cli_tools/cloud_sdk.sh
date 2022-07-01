@@ -11,10 +11,10 @@ echo -e "\ninstall cloud sdk"
 check gcloud || \
 (
   echo -e "\ninstall google cloud sdk" && \
-  echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-  sudo apt-get install apt-transport-https ca-certificates gnupg -y && \
-  curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
-  sudo apt-get update && sudo apt-get install google-cloud-sdk -y && \
+  echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+  apt-get install apt-transport-https ca-certificates gnupg -y && \
+  curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
+  apt-get update && apt-get install google-cloud-sdk -y && \
   echo "google cloud sdk was installed"
 )
 # to start work with sdk run - `gcloud init`
