@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+
 set -e
 
 source ../utils.bash
@@ -6,7 +7,7 @@ echo -e "\ninstall cli tools and packages"
 
 : '
 - curl wget git xclip htop software-properties-common
-- tmux
+- tmux tpm
 - zsh oh-my-zsh 
     zsh-autosuggestions 
     zsh-syntax-highlighting 
@@ -14,7 +15,14 @@ echo -e "\ninstall cli tools and packages"
     powerlevel10k theme
 '
 
-sudo apt install curl wget git xclip htop tmux zsh software-properties-common -y
+sudo apt-get install curl wget git xclip htop tmux zsh software-properties-common -y
+
+[ -d "$HOME/.tmux/plugins/tpm/" ] && echo -e "\ntpm has been already installed" || \
+(
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && \
+  echo "\ntpm installation was completed"
+)
+
 
 
 # install oh-my-zsh
