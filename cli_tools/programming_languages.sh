@@ -44,7 +44,7 @@ check virtualenv || \
 check node || \
 (
   echo -e "\ninstall node" && \
-  curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && \
+  curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
   apt install -y nodejs && \
   echo "node was installed. node version - `node -v`"
 )
