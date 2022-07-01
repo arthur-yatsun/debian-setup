@@ -8,7 +8,9 @@ apt-get update
 cd cli_tools/
 bash common.sh bash && \
 bash zsh.sh && \
-bash programming_languages.sh
+bash programming_languages.sh && \
+bash databases.sh && \
+bash cloud_sdk.sh
 
 # bash ./programming_stuff/cli_tools_n_packages.bash && \
 # bash ./programming_stuff/languages.bash && \
