@@ -16,19 +16,19 @@ check python3 || \
   (
     echo -e "\ninstall python3" && \
     add-apt-repository ppa:deadsnakes/ppa -y && \
-    apt update && \
-    apt install python3.8 && \
+    apt-get update && \
+    apt-get install python3.8 && \
     echo "python3.8 was installed";
 
     # install python stuff
-    apt install python3-distutils -y && \
+    apt-get install python3-distutils -y && \
     echo "python stuff were installed"
   )
 
 check pip3 || \
  (
     echo -e "\ninstall pip3" && \
-    apt install python3-pip -y && \
+    apt-get install python3-pip -y && \
     echo "pip3 was installed"
  )
 
@@ -45,7 +45,7 @@ check node || \
 (
   echo -e "\ninstall node" && \
   curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
-  apt install -y nodejs && \
+  apt-get install -y nodejs && \
   echo "node was installed. node version - `node -v`"
 )
 
@@ -54,7 +54,7 @@ check node || \
 check java || \
 (
   echo -e "\ninstall java" && \
-  apt install default-jre default-jdk -y && \
+  apt-get install default-jre default-jdk -y && \
   echo "java was installed. " && \
   echo "java version - `java -version`. javac version - `javac -version`"
 )
@@ -62,6 +62,6 @@ check java || \
 check mvn || \
 (
   echo -e "\ninstall mvn" && \
-  apt install maven -y && \
+  apt-get install maven -y && \
   echo "maven was installed. maven version - `mvn --version`"
 )
