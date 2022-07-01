@@ -6,8 +6,8 @@ echo -e "\ninstall programming languages"
 
 : '
 - python3 + pip3 + distutils + virtualenv
-- java + maven
-- node
+- java + Maven
+- nodeJS
 '
 
 
