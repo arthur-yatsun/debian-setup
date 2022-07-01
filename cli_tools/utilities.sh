@@ -10,7 +10,7 @@ echo -e "\ninstall cli tools and packages"
 - tmux tpm
 '
 
-apt-get install curl wget git xclip htop tmux zsh software-properties-common stow -y
+apt-get install curl vim wget git xclip htop tmux zsh software-properties-common stow -y
 
 [ -d "$HOME/.tmux/plugins/tpm/" ] && echo -e "\ntpm has been already installed" || \
 (
