@@ -8,5 +8,4 @@ echo -e "\ninstall cli tools and packages"
 : '
 '
 apt-get install curl vim wget git xclip htop zsh \
-    software-properties-common stow libreadline-dev \
-    python-software-properties -y
+    software-properties-common stow libreadline-dev -y
