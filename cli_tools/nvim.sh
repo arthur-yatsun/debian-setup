@@ -10,5 +10,5 @@ check nvim ||
 (
   add-apt-repository ppa:neovim-ppa/stable -y && \
   apt-get update && \
-  apt-get install neovim
+  apt-get install neovim -y
 )
