@@ -7,7 +7,7 @@ apt-get update
 
 cd cli_tools/
 
-bash common.sh bash && \
+bash common.sh && \
 bash zsh.sh && \
 bash nvim.sh && \
 bash tmux.sh  && \
